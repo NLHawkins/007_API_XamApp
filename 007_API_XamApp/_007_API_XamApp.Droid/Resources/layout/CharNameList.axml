@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="30px"
+    android:minHeight="30px"
+    android:weightSum="100"
+    android:paddingLeft="5dp"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp">
+    <TextView
+        android:text="Id"
+        android:layout_width="match_parent"
+        android:layout_weight="90"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCharId"
+        android:padding="0dp"
+        android:height="59dp"
+        android:textSize="19dp" />
+    <TextView
+        android:text="Name"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCharName"
+        android:height="59dp"
+        android:textSize="19dp" />
+</LinearLayout>
