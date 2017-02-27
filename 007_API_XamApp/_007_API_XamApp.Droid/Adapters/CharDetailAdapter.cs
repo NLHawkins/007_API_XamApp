@@ -12,18 +12,18 @@ using Android.Widget;
 
 namespace _007_API_XamApp.Droid.Adapters
 {
-    class CharNameListViewAdapter : BaseAdapter<Character>
+    class CharDetailAdapter : BaseAdapter<Character>
     {
-        private List<Character> listItems;
+        private Character[] listItems;
         Context myContext;
 
-        public CharNameListViewAdapter(Context context, List<Character> items)
+        public CharDetailAdapter(Activity context, Character[] items) : base()
         {
-            listItems = items;
-            myContext = context;
+            this.listItems = items;
+            this.myContext = context;
         }
 
-
+            
         public override Character this[int position]
         {
             get
@@ -36,7 +36,7 @@ namespace _007_API_XamApp.Droid.Adapters
         {
             get
             {
-                return listItems.Count;
+                return listItems.Length;
             }
         }
 
@@ -50,11 +50,11 @@ namespace _007_API_XamApp.Droid.Adapters
             View row = convertView;
             if (row == null)
             {
-                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.CharList_row, null, false);
+                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.dialogListView, null, false);
             }
 
-            TextView txtCharId = row.FindViewById<TextView>(Resource.Id.txtCharId);
-            txtCharId.Text = listItems[position].Id;
+            TextView txtCharBio = row.FindViewById<TextView>(Resource.Id.txtCharBio);
+            txtCharBio.Text = listItems[position].Bio;
 
             TextView txtCharName = row.FindViewById<TextView>(Resource.Id.txtCharName);
             txtCharName.Text = listItems[position].Name;

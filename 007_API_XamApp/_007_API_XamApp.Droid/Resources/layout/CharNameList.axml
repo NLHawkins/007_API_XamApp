@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="30px"
@@ -9,21 +9,45 @@
     android:paddingLeft="5dp"
     android:paddingBottom="2dp"
     android:paddingTop="2dp">
-    <TextView
-        android:text="Id"
+    <ListView
         android:layout_width="match_parent"
-        android:layout_weight="90"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCharId"
-        android:padding="0dp"
-        android:height="59dp"
-        android:textSize="19dp" />
-    <TextView
-        android:text="Name"
-        android:layout_width="match_parent"
-        android:layout_weight="10"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCharName"
-        android:height="59dp"
-        android:textSize="19dp" />
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:id="@+id/charNameList"
+        android:paddingLeft="5dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:minWidth="30px"
+        android:minHeight="30px"
+        android:weightSum="100"
+        android:paddingLeft="5dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp">
+        <Button
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Prev"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:id="@+id/prevB" />
+        <Button
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:id="@+id/homeB" />
+        <Button
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:id="@+id/nextB" />
+    </LinearLayout>
 </LinearLayout>

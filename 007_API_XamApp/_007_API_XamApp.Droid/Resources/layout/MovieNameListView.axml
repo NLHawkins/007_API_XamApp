@@ -11,16 +11,25 @@
               android:layout_width="match_parent"
               android:layout_weight="33"
               android:layout_height="wrap_content"
-              android:id="@+id/txtCharId"
+              android:id="@+id/txtMovieId"
               android:padding="15dp"
               android:height="59dp"
               android:textSize="19dp" />
   <TextView
-              android:text="Name"
+              android:text="Title"
               android:layout_width="match_parent"
               android:layout_weight="33"
               android:layout_height="wrap_content"
-              android:id="@+id/txtCharName"
+              android:id="@+id/txtMovieTitle"
+              android:padding="15dp"
+              android:height="59dp"
+              android:textSize="19dp" />
+  <TextView
+              android:text="Date"
+              android:layout_width="match_parent"
+              android:layout_weight="33"
+              android:layout_height="wrap_content"
+              android:id="@+id/txtMovieReleaseDate"
               android:padding="15dp"
               android:height="59dp"
               android:textSize="19dp" />

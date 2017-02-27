@@ -16,7 +16,7 @@
               android:height="59dp"
               android:textSize="19dp" />
   <TextView
-              android:text="Subject"
+              android:text="Title"
               android:layout_width="match_parent"
               android:layout_weight="33"
               android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
               android:height="59dp"
               android:textSize="19dp" />
   <TextView
-              android:text="Level"
+              android:text="Date"
               android:layout_width="match_parent"
               android:layout_weight="33"
               android:layout_height="wrap_content"

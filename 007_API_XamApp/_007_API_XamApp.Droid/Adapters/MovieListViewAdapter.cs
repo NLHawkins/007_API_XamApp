@@ -51,7 +51,7 @@ namespace _007_API_XamApp.Droid
             View row = convertView;
             if (row == null)
             {
-                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.MovieList, null, false);
+                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.MovieListView, null, false);
             }
 
 

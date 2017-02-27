@@ -12,34 +12,19 @@ using Android.Widget;
 
 namespace _007_API_XamApp.Droid
 {
-    class CharListViewAdapter : BaseAdapter<Character>
+    class CharListViewAdapter : BaseAdapter<string>
     {
 
-        private List<Character> listItems;
+        private Character listItem;
         Context myContext;
 
-        public CharListViewAdapter(Context context, List<Character> items)
+        public CharListViewAdapter(Context context, Character item)
         {
-            listItems = items;
+            listItem = item;
             myContext = context;
         }
 
 
-        public override Character this[int position]
-        {
-            get
-            {
-                return listItems[position];
-            }
-        }
-
-        public override int Count
-        {
-            get
-            {
-                return listItems.Count;
-            }
-        }
 
         public override long GetItemId(int position)
         {
@@ -51,7 +36,7 @@ namespace _007_API_XamApp.Droid
             View row = convertView;
             if (row == null)
             {
-                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.CharListView, null, false);
+                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.dialog_CharDetailView, null, false);
             }
 
 

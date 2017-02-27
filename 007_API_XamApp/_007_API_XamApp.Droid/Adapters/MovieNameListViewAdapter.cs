@@ -12,19 +12,19 @@ using Android.Widget;
 
 namespace _007_API_XamApp.Droid.Adapters
 {
-    class CharNameListViewAdapter : BaseAdapter<Character>
+    class MovieNameListViewAdapter : BaseAdapter<Movie>
     {
-        private List<Character> listItems;
+        private List<Movie> listItems;
         Context myContext;
 
-        public CharNameListViewAdapter(Context context, List<Character> items)
+        public MovieNameListViewAdapter(Context context, List<Movie> items)
         {
             listItems = items;
             myContext = context;
         }
 
 
-        public override Character this[int position]
+        public override Movie this[int position]
         {
             get
             {
@@ -50,14 +50,14 @@ namespace _007_API_XamApp.Droid.Adapters
             View row = convertView;
             if (row == null)
             {
-                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.CharList_row, null, false);
+                row = LayoutInflater.From(myContext).Inflate(Resource.Layout.MovieNameListView, null, false);
             }
 
-            TextView txtCharId = row.FindViewById<TextView>(Resource.Id.txtCharId);
-            txtCharId.Text = listItems[position].Id;
+            TextView txtMovieId = row.FindViewById<TextView>(Resource.Id.txtMovieId);
+            txtMovieId.Text = listItems[position].Id;
 
-            TextView txtCharName = row.FindViewById<TextView>(Resource.Id.txtCharName);
-            txtCharName.Text = listItems[position].Name;
+            TextView txtMovieTitle = row.FindViewById<TextView>(Resource.Id.txtMovieTitle);
+            txtMovieTitle.Text = listItems[position].Title;
 
             return row;
         }

@@ -4,8 +4,7 @@
     android:layout_marginTop="28dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:id="@+id/getSection">
+    android:gravity="center_horizontal">
     <Button
         android:id="@+id/getMoviesButton"
         android:layout_width="300dp"
@@ -13,7 +12,6 @@
         android:gravity="center_horizontal"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Movies" />
-
     <Button
         android:id="@+id/getGadgetsButton"
         android:layout_width="300dp"
